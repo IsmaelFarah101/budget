@@ -7,13 +7,13 @@
         </b-collapse>
         </div>
        <div class='container'>
-        <b-button v-b-toggle.savings-chart class="m-1">Income</b-button>
+        <b-button v-b-toggle.savings-chart class="m-1">Savings</b-button>
         <b-collapse visible id="savings-chart">
             <b-card><SavingsChart></SavingsChart></b-card>
         </b-collapse>
         </div>
         <div class='container'>
-        <b-button v-b-toggle.bills-chart class="m-1">Income</b-button>
+        <b-button v-b-toggle.bills-chart class="m-1">Bills</b-button>
         <b-collapse visible id="bills-chart">
             <b-card><BillsChart></BillsChart></b-card>
         </b-collapse>
