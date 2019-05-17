@@ -3,9 +3,8 @@
 <b-navbar type="dark" variant="dark">
  <b-navbar-brand>Budgeter</b-navbar-brand>
     <b-navbar-nav>
-        <b-nav-item href="#">git link</b-nav-item>
-        <b-nav-item href="#"></b-nav-item>
-        <b-nav-item></b-nav-item>
+        <!--This is a link to my github-->
+        <b-nav-item href="https://github.com/IsmaelFarah101/budget">git link</b-nav-item>
     </b-navbar-nav>
 </b-navbar>
 </div>

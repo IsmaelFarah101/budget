@@ -26,16 +26,7 @@ let income = [
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    /*
-      Add altering commands here.
-      Return a promise to correctly handle asynchronicity.
-
-      Example:
-      return queryInterface.bulkInsert('People', [{
-        name: 'John Doe',
-        isBetaMember: false
-      }], {});
-    */
+    //this function seeds the database and i tagged some data to go along with
     let incomes = income.map(function(s) { 
       s.createdAt = new Date(), 
       s.updatedAt = new Date()
@@ -46,10 +37,8 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    /*
-      Add reverting commands here.
-      Return a promise to correctly handle asynchronicity.
-    */
+        //this undos the seeded database
+
       return queryInterface.bulkDelete('Incomes', null, {});
 
   }

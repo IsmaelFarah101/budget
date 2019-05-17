@@ -1,3 +1,4 @@
+//most of this is renders but some of it i installed to ad functionality
 import Vue from 'vue'
 import App from './App.vue'
 import BootstrapVue from 'bootstrap-vue'

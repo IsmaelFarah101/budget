@@ -1,10 +1,12 @@
 <template>
 <div class='container'>
+    <!--This displays user input failures-->
         <div class='alert alert-danger' v-show='errors && errors.length>0'>
             <li v-for='error in errors' v-bind:key='error'>
                 {{error}}
             </li>
         </div>
+        <!--This is a form that allows you to create a bill-->
         <h1>Add Bill</h1>
         <form>
             <div class='form-group'>
@@ -27,6 +29,7 @@ export default {
 name:'BillsAdd',
   data(){
         return{
+            //this holds the new bills data 
             newname:'',
             newamount:0,
             newdescription:'',
@@ -35,6 +38,7 @@ name:'BillsAdd',
         }
     },
     methods:{
+        //this function checks for the correct user input and then creates a object wioth the user input and emits it to the parent component
         addBills(){
             this.errors=[]
             if(this.newname && this.newamount && this.newdescription){

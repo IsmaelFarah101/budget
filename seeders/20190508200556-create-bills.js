@@ -28,16 +28,7 @@ let bill = [
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    /*
-      Add altering commands here.
-      Return a promise to correctly handle asynchronicity.
-
-      Example:
-      return queryInterface.bulkInsert('People', [{
-        name: 'John Doe',
-        isBetaMember: false
-      }], {});
-    */
+    //this function seeds the database i added some data to be tagged on
     let bills = bill.map(function(s) {
       s.paid = false  
       s.createdAt = new Date(), 
@@ -49,10 +40,7 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    /*
-      Add reverting commands here.
-      Return a promise to correctly handle asynchronicity.
-    */
+    //this function undos the seeded data
       return queryInterface.bulkDelete('Bills', null, {});
 
   }

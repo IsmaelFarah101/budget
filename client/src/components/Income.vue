@@ -1,5 +1,6 @@
 <template>
 <div class='container'>
+    <!--This contains the component relating to the income it displays the table and total-->
     <b-button v-b-modal.income-modal variant="primary">Add Income</b-button>
 
 <div class='row'>
@@ -30,15 +31,19 @@ export default {
     },
     data(){
         return{
+            
             incomes:[],
             name:'Total Income',
         }
     },
-    mounted(){
+    mounted(){        
+        //this initially fetches the data when the componenent is rendered
+
         this.updateIncome()
         
     },
     methods:{
+        //this function interacted with the api to add a new income to the model
         newIncomeAdded(income){
             this.$finance_api.addIncome(income).then(() => {
                 this.updateIncome()
@@ -47,11 +52,13 @@ export default {
                 alert('Error adding income.\n ' + errormsg)
             })
         },
+    //this function interacted with the api to delete a income from the model
         incomeDeleted(income){
             this.$finance_api.deleteIncome(income.id).then(() => {
                 this.updateIncome()
             })
         },
+        //this function gets the income data
         updateIncome(){
             this.$finance_api.getAllIncome().then(data => {
                 this.incomes = data

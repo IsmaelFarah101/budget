@@ -1,4 +1,5 @@
 <script>
+  //much of this code i got from a website online 
   //Importing Bar class from the vue-chartjs wrapper
   import { Bar } from 'vue-chartjs'
 import { setTimeout } from 'timers';
@@ -50,6 +51,7 @@ import { setTimeout } from 'timers';
     computed:{
         },
     methods:{
+      // this is the part of the code that I wrote to get the data and render the chart when the data was in the vue component
         getData(){
             this.$finance_api.getAllBills().then(data => {
             data.forEach(element => {

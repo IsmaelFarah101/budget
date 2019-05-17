@@ -2,6 +2,7 @@
   <div id="app">
     
     <Header></Header>
+    <!--This gets this gets all the components in the router and dsiplays them accordingly-->
     <RouterView></RouterView>
     <Footer></Footer>
 

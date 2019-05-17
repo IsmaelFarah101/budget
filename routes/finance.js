@@ -1,9 +1,10 @@
+//installing the nessacary modules
 let express = require('express')
 let Savings = require('../models').Savings
 let Bills = require('../models').Bills
 let Income = require('../models').Income
-let router = express.Router()
-    
+let router = express.Router()   
+//these are routes that handle api calls and fetches the nesscary data
 router.get('/savings', function(req,res,next){
     Savings.findAll({order: ['id']})
     .then(savings => {

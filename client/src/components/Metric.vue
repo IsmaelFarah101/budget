@@ -1,5 +1,6 @@
 <template>
     <div>
+        <!--This display the charts in a collpased format using bootstrap-->
         <div class='container'>
         <b-button v-b-toggle.income-chart class="m-1">Income</b-button>
         <b-collapse visible id="income-chart">

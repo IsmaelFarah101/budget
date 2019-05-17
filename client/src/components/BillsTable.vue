@@ -15,6 +15,7 @@
             <th>Paid</th>
             <th v-show='editTable'>Delete</th>
         </tr>
+        <!--THis table duisplays the data from the model and any data the users add-->
         <BillsRow v-for='bill in bills'
         v-bind:key='bill.id'
         v-bind:bills='bill'
@@ -46,9 +47,11 @@ export default {
         bills:Array
     },
     methods:{
+        //this emits the bill being deleted to the parent component
         billsDeleted(bills){
             this.$emit('delete-bills', bills)
         },
+        //this updates the bill without emiting it to the parent component
           updateBillPaid(billid, billpaid){
         this.$finance_api.updateBill(billid, billpaid).then(data => {
             
